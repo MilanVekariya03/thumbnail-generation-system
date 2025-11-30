@@ -14,6 +14,7 @@
     "build:backend": "npm run build --workspace=packages/backend",
     "build:worker": "npm run build --workspace=packages/worker",
     "build:web": "npm run build --workspace=packages/web",
+    "build:shared": "npm run build --workspace=packages/shared",
     "start:backend": "npm run start --workspace=packages/backend",
     "start:worker": "npm run start --workspace=packages/worker",
     "start:web": "npm run start --workspace=packages/web",
