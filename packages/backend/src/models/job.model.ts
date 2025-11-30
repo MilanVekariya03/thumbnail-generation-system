@@ -6,8 +6,7 @@ export interface JobDocument extends Omit<IJob, '_id'>, Document {}
 const jobSchema = new Schema<JobDocument>(
   {
     userId: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
+      type: String,
       required: true,
       index: true,
     },

@@ -3,7 +3,7 @@ import { AppError, AuthenticatedUser } from '@thumbnail-system/shared';
 
 declare module 'fastify' {
   interface FastifyRequest {
-    user?: AuthenticatedUser;
+    user: AuthenticatedUser;
   }
 }
 
