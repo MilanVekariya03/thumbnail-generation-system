@@ -1,0 +1,11 @@
+node_modules
+.next
+dist
+uploads
+thumbnails
+packages/backend/uploads
+packages/backend/thumbnails
+.env
+.env.local
+*.log
+.DS_Store
