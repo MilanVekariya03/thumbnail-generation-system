@@ -31,13 +31,19 @@ git push origin main
    
    **Install Command**: `npm install`
 
-5. Add Environment Variables (leave these for now, update after backend deployment):
+5. **IMPORTANT**: In "Build & Development Settings", override these:
+   
+   **Root Directory**: `packages/web` (click "Edit" and select this folder)
+   
+   Leave other settings as default (Next.js will auto-detect)
+
+6. Add Environment Variables (leave these for now, update after backend deployment):
    ```
    NEXT_PUBLIC_API_URL=http://localhost:3001
    NEXT_PUBLIC_WS_URL=http://localhost:3001
    ```
 
-6. Click "Deploy"
+7. Click "Deploy"
 
 ### 3. Deploy Backend to Railway
 

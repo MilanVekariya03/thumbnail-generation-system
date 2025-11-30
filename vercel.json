@@ -1,15 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "packages/web/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "packages/web/$1"
-    }
-  ]
+  "buildCommand": "cd ../.. && npm install && npm run build --workspace=packages/shared && cd packages/web && npm run build",
+  "installCommand": "cd ../.. && npm install"
 }
