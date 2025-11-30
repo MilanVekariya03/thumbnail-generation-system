@@ -1,0 +1,27 @@
+{
+  "name": "thumbnail-generation-system",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:worker\" \"npm run dev:web\"",
+    "dev:backend": "npm run dev --workspace=packages/backend",
+    "dev:worker": "npm run dev --workspace=packages/worker",
+    "dev:web": "npm run dev --workspace=packages/web",
+    "build": "npm run build --workspaces",
+    "build:backend": "npm run build --workspace=packages/backend",
+    "build:worker": "npm run build --workspace=packages/worker",
+    "build:web": "npm run build --workspace=packages/web",
+    "start:backend": "npm run start --workspace=packages/backend",
+    "start:worker": "npm run start --workspace=packages/worker",
+    "start:web": "npm run start --workspace=packages/web",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}
