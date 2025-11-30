@@ -24,6 +24,11 @@ A full-stack TypeScript application for generating thumbnails from images and vi
 
 ## Prerequisites
 
+<img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/c02dc302-f446-43a9-9d46-ebae25382561" />
+<img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/7bd1612d-f3a9-4fc4-ba45-9693669b96ed" />
+<img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/f7cbb4f6-7df8-4508-b6ac-e40f17f6b1a0" />
+
+
 ### System Requirements
 
 - Node.js 18+ and npm
