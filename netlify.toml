@@ -1,0 +1,12 @@
+[build]
+  base = "packages/web"
+  command = "cd ../.. && npm install && npm run build --workspace=packages/shared && cd packages/web && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
