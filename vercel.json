@@ -1,3 +1,0 @@
-{
-  "buildCommand": "npm run build --workspace=packages/shared && npm run build --workspace=packages/web"
-}
