@@ -51,7 +51,7 @@ export class VideoProcessor {
 
   private getVideoDuration(inputPath: string): Promise<number> {
     return new Promise((resolve, reject) => {
-      ffmpeg.ffprobe(inputPath, (err, metadata) => {
+      ffmpeg.ffprobe(inputPath, (err: any, metadata: any) => {
         if (err) {
           reject(err);
         } else {
@@ -71,7 +71,7 @@ export class VideoProcessor {
           size: '1920x1080', // Extract high quality frame
         })
         .on('end', () => resolve())
-        .on('error', (err) => reject(err));
+        .on('error', (err: any) => reject(err));
     });
   }
 }
