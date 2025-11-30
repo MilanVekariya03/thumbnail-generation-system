@@ -57,8 +57,8 @@ Once you have your Railway backend URL, update the environment variables:
 ### Error: "No Output Directory named 'public' found"
 **Solution**: Make sure you set the Root Directory to `packages/web` in project settings.
 
-### Error: "Cannot find module '@thumbnail-system/shared'"
-**Solution**: The vercel.json build command should build the shared package first. This is already configured.
+### Error: "Cannot find module '@thumbnail-system/shared'" or "tsc: command not found"
+**Solution**: The vercel.json build command builds the shared package first, and TypeScript is now in dependencies (not devDependencies) to ensure it's available during build.
 
 ### Build succeeds but app doesn't work
 **Solution**: Check that environment variables are set correctly and backend URL is accessible.
