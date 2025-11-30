@@ -1,0 +1,52 @@
+services:
+  # Backend API Service
+  - type: web
+    name: thumbnail-backend
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build --workspace=packages/shared && npm run build --workspace=packages/backend
+    startCommand: npm run start --workspace=packages/backend
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: MONGO_URL
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: UPLOAD_DIR
+        value: ./uploads
+      - key: THUMBNAIL_DIR
+        value: ./thumbnails
+
+  # Worker Service
+  - type: worker
+    name: thumbnail-worker
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build --workspace=packages/shared && npm run build --workspace=packages/worker
+    startCommand: npm run start --workspace=packages/worker
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URL
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: UPLOAD_DIR
+        value: ./uploads
+      - key: THUMBNAIL_DIR
+        value: ./thumbnails
+      - key: WORKER_CONCURRENCY
+        value: 2
+      - key: JOB_TIMEOUT
+        value: 300000
